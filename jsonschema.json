@@ -1,0 +1,135 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Beneficiary",
+    "definitions": {
+        "Beneficiary": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "status": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "header_image": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                },
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "syllabus_link": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                },
+                "prerequisites": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "outcomes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "duration": {
+                    "type": "string"
+                },
+                "video": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".mp4"
+                    ]
+                },
+                "intro_video_cover": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".jpg"
+                    ]
+                },
+                "payment_link": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                },
+                "instructor": {
+                    "$ref": "#/definitions/Instructor"
+                }
+            },
+            "required": [
+                "description",
+                "duration",
+                "header_image",
+                "id",
+                "instructor",
+                "intro_video_cover",
+                "outcomes",
+                "payment_link",
+                "prerequisites",
+                "status",
+                "syllabus_link",
+                "title",
+                "video"
+            ],
+            "title": "Beneficiary"
+        },
+        "Instructor": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "about": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".png"
+                    ]
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                }
+            },
+            "required": [
+                "about",
+                "image",
+                "name",
+                "url"
+            ],
+            "title": "Instructor"
+        }
+    }
+}
