@@ -1,0 +1,7 @@
+Nice job.
+Ensure you maintain proper folder structures always.
+I love the fact that you added proper comments to your code. Really nice. Keep it up.
+
+Nice work with the error handling.
+
+I would love to see how you handle data validation next time.
